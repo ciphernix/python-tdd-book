@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn server for superlist-staging.DOMAIN.net
+
+[Service]
+Restart=on-failure
+User=USER
+WorkingDirectory=/home/USER/sites/superlist-staging.DOMAIN.net
+EnvironmentFile=/home/USER/sites/superlist-staging.DOMAIN.net/.env
+
+ExecStart=/home/USER/sites/superlist-staging.DOMAIN.net/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/superlist-staging.DOMAIN.net.socket \
+    superlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
