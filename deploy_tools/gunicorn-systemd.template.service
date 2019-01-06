@@ -4,11 +4,11 @@ Description=Gunicorn server for superlist-staging.DOMAIN.net
 [Service]
 Restart=on-failure
 User=USER
-WorkingDirectory=/home/USER/sites/superlist-staging.DOMAIN.net
-EnvironmentFile=/home/USER/sites/superlist-staging.DOMAIN.net/.env
+WorkingDirectory=/home/USER/sites/DOMAIN
+EnvironmentFile=/home/USER/sites/DOMAIN/.env
 
-ExecStart=/home/USER/sites/superlist-staging.DOMAIN.net/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/superlist-staging.DOMAIN.net.socket \
+ExecStart=/home/USER/sites/DOMAIN/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/DOMAIN.socket \
     superlists.wsgi:application
 
 [Install]
