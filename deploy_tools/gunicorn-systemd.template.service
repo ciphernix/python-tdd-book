@@ -1,5 +1,5 @@
 [Unit]
-Description=Gunicorn server for superlist-staging.DOMAIN.net
+Description=Gunicorn server for DOMAIN
 
 [Service]
 Restart=on-failure
