@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "virtualenv/bin/python"
+		"python.pythonPath": "virtualenv/bin/python3.6"
 	}
 }
